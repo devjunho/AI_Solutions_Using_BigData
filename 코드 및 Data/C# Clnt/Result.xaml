@@ -1,0 +1,46 @@
+﻿<Page x:Class="Predict.Result"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Predict"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Result">
+
+    <Grid Background="#FFC7C7C8">
+        <Border Background="#FFF3F3F3" CornerRadius="15" HorizontalAlignment="Center" Height="350" VerticalAlignment="Center" Width="600" BorderBrush="#FF080808">
+            <Grid>
+                <Button x:Name="Back_btn" Content="Back to Menu" HorizontalAlignment="Center" Height="45" Margin="0,279,0,0" VerticalAlignment="Top" Width="219" FontWeight="Bold" FontFamily="Arial Black" FontSize="18" Background="#FFDDDDDD" Foreground="#FF706C6C" Click="Back_btn_Click">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Grid>
+                                            <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10"/>
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Grid>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="border" Property="Background" Value="#FFB2C7D4"/>
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter TargetName="border" Property="Background" Value="#FF8EA2B1"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Label x:Name="Title_label" Content="심혈관질환 예측 결과" HorizontalAlignment="Center" Height="38" Margin="0,33,0,0" VerticalAlignment="Top" Width="224" FontWeight="Bold" FontSize="22"/>
+                <Rectangle HorizontalAlignment="Center" Height="144" Margin="0,98,0,0" Stroke="#FF565656" VerticalAlignment="Top" Width="352" RadiusX="20" RadiusY="20" Fill="#FFF3F3F3"/>
+                <Rectangle HorizontalAlignment="Center" Height="102" VerticalAlignment="Center" Width="352" Fill="#FFF3F3F3"/>
+                <TextBlock x:Name="Result_tb" HorizontalAlignment="Center" Margin="0,155,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="30" Width="352" FontWeight="Bold" FontSize="18" TextAlignment="Center"/>
+
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

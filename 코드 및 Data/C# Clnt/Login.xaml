@@ -1,0 +1,76 @@
+﻿<Page x:Class="Predict.Login"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Predict"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Login">
+
+    <Grid Background="#FFC7C7C8">
+        <Border Background="#FFF3F3F3" CornerRadius="15" HorizontalAlignment="Center" Height="350" VerticalAlignment="Center" Width="600">
+            <Grid>
+                <Label x:Name="Title_Id" Content="ID" HorizontalAlignment="Left" Height="38" Margin="174,136,0,0" VerticalAlignment="Top" Width="43" FontSize="24" FontFamily="Arial Black" RenderTransformOrigin="1.012,0.526" Foreground="#FF8F8F8F"/>
+                <TextBox x:Name="Id_tb" HorizontalAlignment="Left" Height="38" Margin="217,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="216" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <Label x:Name="Tilte_Pw" Content="PW" HorizontalAlignment="Left" Height="38" Margin="164,191,0,0" VerticalAlignment="Top" Width="53" FontSize="24" FontFamily="Arial Black" Foreground="#FF8F8F8F"/>
+                <PasswordBox x:Name="Pw_tb" HorizontalAlignment="Left" Height="35" Margin="217,192,0,0" VerticalAlignment="Top" Width="216" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <Button x:Name="Join_btn" Content="Join" HorizontalAlignment="Left" Height="45" Margin="169,257,0,0" VerticalAlignment="Top" Width="108" FontSize="18" FontFamily="Arial Black" Click="Join_btn_Click" Foreground="#FF706C6C">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#FFDDDDDD"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border x:Name="border" CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="border" Property="Background" Value="#FFCCCCCC"/>
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter TargetName="border" Property="Background" Value="#FFB3B3B3"/>
+                                            </Trigger>
+                                            <Trigger Property="IsEnabled" Value="False">
+                                                <Setter TargetName="border" Property="Background" Value="#FFE0E0E0"/>
+                                                <Setter Property="Foreground" Value="#FFB0B0B0"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Button x:Name="Login_btn" Content="Login" HorizontalAlignment="Left" Height="45" Margin="325,257,0,0" VerticalAlignment="Top" Width="108" FontSize="18" FontFamily="Arial Black" Click="Login_btn_Click" Foreground="#FF706C6C" Background="#FFDDDDDD">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#FFC7C7C8"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Grid>
+                                            <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10"/>
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Grid>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="border" Property="Background" Value="#FFBEBEBF"/>
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter TargetName="border" Property="Background" Value="#FFA5A5A6"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+
+                <Label x:Name="Title" Content="LOGIN" Height="55" Margin="217,58,225,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="48" FontFamily="Arial" Foreground="#FF8F8F8F"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>
